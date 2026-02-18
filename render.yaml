@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: habaq-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PHONE_NUMBER_ID
+        value: 924145300793335
+      - key: ACCESS_TOKEN
+        value: YOUR_EAA_TOKEN_HERE
+      - key: VERIFY_TOKEN
+        value: habaq_verify_2024
