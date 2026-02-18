@@ -342,6 +342,60 @@ def home():
     return "🌿 Habaq Perfumes Bot is running!", 200
 
 
+@app.route("/privacy", methods=["GET"])
+def privacy():
+    return """<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – Habaq Perfumes</title>
+<style>body{font-family:Arial,sans-serif;max-width:800px;margin:40px auto;padding:20px;color:#333;line-height:1.8}h1{color:#1e5c38}h2{color:#2a7a4b;margin-top:30px}</style>
+</head>
+<body>
+<div style="font-size:2em">🌿</div>
+<h1>سياسة الخصوصية – حبق للعطور<br><small style="font-size:0.5em">Privacy Policy – Habaq Perfumes</small></h1>
+<p><strong>آخر تحديث:</strong> 2025</p>
+<h2>1. المعلومات التي نجمعها</h2>
+<p>عند تواصلك معنا عبر واتساب، نجمع رقم هاتفك والرسائل التي ترسلها لغرض معالجة طلبك وتقديم خدمة العملاء.</p>
+<h2>2. كيف نستخدم معلوماتك</h2>
+<p>نستخدم المعلومات فقط من أجل: معالجة الطلبات، التواصل بشأن توصيل المنتجات، وتحسين خدمتنا.</p>
+<h2>3. مشاركة المعلومات</h2>
+<p>لا نبيع أو نشارك معلوماتك الشخصية مع أطراف ثالثة لأغراض تجارية.</p>
+<h2>4. الاحتفاظ بالبيانات</h2>
+<p>نحتفظ ببيانات المحادثة لمدة لا تتجاوز 90 يومًا لأغراض خدمة العملاء فقط.</p>
+<h2>5. حقوقك</h2>
+<p>يمكنك في أي وقت طلب حذف بياناتك بإرسال رسالة "حذف بياناتي" عبر واتساب.</p>
+<h2>6. التواصل معنا</h2>
+<p>📱 واتساب: +961 79 336 448<br>📧 mohamadaliawde12011979@gmail.com</p>
+<hr><p style="color:#888;font-size:0.9em">Habaq Perfumes – Lebanon © 2025</p>
+</body></html>""", 200
+
+
+@app.route("/terms", methods=["GET"])
+def terms():
+    return """<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service – Habaq Perfumes</title>
+<style>body{font-family:Arial,sans-serif;max-width:800px;margin:40px auto;padding:20px;color:#333;line-height:1.8}h1{color:#1e5c38}h2{color:#2a7a4b;margin-top:30px}</style>
+</head>
+<body>
+<div style="font-size:2em">🌿</div>
+<h1>شروط الخدمة – حبق للعطور<br><small style="font-size:0.5em">Terms of Service – Habaq Perfumes</small></h1>
+<p><strong>آخر تحديث:</strong> 2025</p>
+<h2>1. قبول الشروط</h2>
+<p>باستخدامك لخدمة واتساب الخاصة بحبق للعطور، فإنك توافق على هذه الشروط.</p>
+<h2>2. الخدمة</h2>
+<p>نقدم خدمة استفسار وطلب العطور عبر واتساب. نحتفظ بحق تعديل أو إيقاف الخدمة في أي وقت.</p>
+<h2>3. الطلبات والدفع</h2>
+<p>تُعتبر الطلبات مؤكدة فقط بعد تأكيدنا الصريح عبر واتساب. الأسعار قابلة للتغيير دون إشعار مسبق.</p>
+<h2>4. التوصيل</h2>
+<p>نوفر التوصيل داخل لبنان. أوقات التوصيل تقديرية وقد تتأثر بظروف خارجة عن إرادتنا.</p>
+<h2>5. التواصل معنا</h2>
+<p>📱 واتساب: +961 79 336 448<br>📧 mohamadaliawde12011979@gmail.com</p>
+<hr><p style="color:#888;font-size:0.9em">Habaq Perfumes – Lebanon © 2025</p>
+</body></html>""", 200
+
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=False)
